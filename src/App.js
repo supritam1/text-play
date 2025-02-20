@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
@@ -52,6 +54,7 @@ function App() {
     <Alert alert={alert}/>
     <div className='container my-3'>
     <Routes>
+    <Route path="/" element={<TextForm head="Thoughts" mode={mode} showAlert={showAlert} />} />
       <Route path="/about" element={<About mode={mode}/>} />
       <Route path="/textform" element={<TextForm head="Thoughts" mode={mode} showAlert={showAlert} />} />
     </Routes>
